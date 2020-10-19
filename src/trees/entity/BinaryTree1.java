@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.swing.plaf.basic.BasicTreeUI.TreeCancelEditingAction;
 
-public class BinaryTree {
+public class BinaryTree1 {
 	
 	private Node root;
 	
@@ -46,6 +46,25 @@ public class BinaryTree {
 		}
 	}
 	
+	public int nodeLeafCount2(Node n) {
+		if(n.isLeaf()) {
+			return 1;
+		}
+		else
+            return nodeLeafCount2(n.getLeft()) + nodeLeafCount2(n.getRight());
+	}
+	
+	public boolean isSearchBT3() {
+			if(root.hasLeft() && root.hasLeft()) {
+				if(root.getValue() > root.getLeft().getValue() && root.getValue() < root.getRight().getValue()) {
+					return true;
+				}
+			} else {
+				return false;
+			}
+			return false;
+	}
+	
 //	public int nodeLeafCount2(BinaryTree t) {
 //		int count=0;
 //		List<Node> visited = new ArrayList<Node>();
@@ -80,5 +99,11 @@ public class BinaryTree {
 //			
 //		}
 //	}
+//	getLeafCount(node)
+//	1) If node is NULL then return 0.
+//	2) Else If left and right child nodes are NULL return 1.
+//	3) Else recursively calculate leaf count of the tree using below formula.
+//	    Leaf count of a tree = Leaf count of left subtree + 
+//	                                 Leaf count of right subtree
 
 }

@@ -1,10 +1,13 @@
 package trees.entity;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Node {
 	private int value;
 	private Node left; 
 	private Node right;
+	public List<Integer> h = new ArrayList<Integer>();
 	
 	public Node(int value) {
 		super();
