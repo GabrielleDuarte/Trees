@@ -9,6 +9,11 @@ public class BinaryTree1 {
 	
 	private Node root;
 	
+	public BinaryTree1(Node root) {
+		super();
+		this.root = root;
+	}
+
 	private Node getNode(Node node, int value) {
 		if (value == node.getValue()) {
 			return node;
@@ -57,6 +62,13 @@ public class BinaryTree1 {
 	public boolean isSearchBT3() {
 			if(root.hasLeft() && root.hasLeft()) {
 				if(root.getValue() > root.getLeft().getValue() && root.getValue() < root.getRight().getValue()) {
+					return true;
+				} 
+				else if (root.hasLeft()) {
+					if(root.getValue() > root.getLeft().getValue())
+						return true;
+				}
+				else if(root.getValue() < root.getRight().getValue()) {
 					return true;
 				}
 			} else {
