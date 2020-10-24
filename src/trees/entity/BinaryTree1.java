@@ -79,5 +79,12 @@ public class BinaryTree1 {
 			}
 	}
 	
-
+	public int height(Node n) {
+		if(n.isLeaf()) {
+			return 1;
+		}
+		else {
+			return 1 + Math.max(height(n.getLeft()), height(n.getRight()));
+		}
+	}
 }

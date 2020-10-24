@@ -1,14 +1,10 @@
 package trees.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Node {
 	private int value;
 	private Node left; 
 	private Node right;
-	public List<Integer> h = new ArrayList<Integer>();
-	
+
 	public Node(int value) {
 		super();
 		this.value = value;
@@ -51,16 +47,4 @@ public class Node {
 		return right != null;
 	}
 
-//	public int countChild() {
-//		if(hasLeft() && hasLeft()) {
-//			return 2;
-//		}
-//		else if(!hasLeft() || !hasRight()) {
-//			return 1;
-//		}
-//		else {
-//			return 0;
-//		} 
-//	}
-	
 }
