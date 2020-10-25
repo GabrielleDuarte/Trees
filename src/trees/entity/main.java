@@ -9,11 +9,13 @@ public class main {
 		Node rootbt3 = new Node(6);
 		Node rootbt4 = new Node(14);
 		Node rootbt5 = new Node(16);
+		Node rootbt6 = new Node(10);
 		BinaryTree1 tree1bt = new BinaryTree1(rootbt1);
 		BinaryTree1 tree2bt = new BinaryTree1(rootbt2);
 		BinaryTree1 tree3bt = new BinaryTree1(rootbt3);
 		BinaryTree1 tree4bt = new BinaryTree1(rootbt4);
 		BinaryTree1 tree5bt = new BinaryTree1(rootbt5);
+		BinaryTree1 tree6bt = new BinaryTree1(rootbt6);
 
 		NodeN_Ary root2 = new NodeN_Ary(20);
 		N_AryTree5 tree2 = new N_AryTree5(root2);
@@ -75,14 +77,13 @@ public class main {
 		tree5bt.add1(32);
 		tree5bt.add1(40);
 		
+		tree6bt.add1(1);
+		tree6bt.add1(11);
+		tree6bt.add1(20);
+		
+		System.out.println(tree6bt.isFull(tree6bt.getRoot()));	
 		
 		
-		System.out.println("Nó tree1 direita:" + tree1bt.getRoot().getRight().getValue());
-		System.out.println("Nó tree1 esquerda:" + tree1bt.getRoot().getLeft().getValue());
-		System.out.println("É BINÁRIA de busca?: " + tree1bt.isSearchBT3());
-		System.out.println("quantos nós folhas: " + tree1bt.nodeLeafCount2(rootbt1));
-		BinaryTree1 tree3 = tree2.convertNarytoBinary();
-		System.out.println("Raiz ex n-aria:" + tree3.getRoot().getValue() + "nó direito: " + tree3.getRoot().getRight().getValue() + " nó esquerdo: " + tree3.getRoot().getLeft().getValue());
 		
 		
 	}

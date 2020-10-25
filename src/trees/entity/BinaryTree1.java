@@ -79,12 +79,27 @@ public class BinaryTree1 {
 			}
 	}
 	
-	public int height(Node n) {
-		if(n.isLeaf()) {
+	public int height(Node node) {
+		if(node.isLeaf()) {
 			return 1;
 		}
 		else {
-			return 1 + Math.max(height(n.getLeft()), height(n.getRight()));
+			return 1 + Math.max(height(node.getLeft()), height(node.getRight()));
 		}
 	}
+	
+	public boolean isFull(Node node) {
+		if(node.isLeaf()) {
+			return true;	
+		}
+		if (node.getLeft()!=null && node.getRight()!=null) {
+			return (isFull(node.getLeft()) && isFull(node.getRight()));
+		}
+		else {
+			return false;
+		}
+         
+	}
+	
+	
 }
