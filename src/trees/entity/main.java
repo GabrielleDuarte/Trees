@@ -10,15 +10,15 @@ public class main {
 		Node rootbt4 = new Node(14);
 		Node rootbt5 = new Node(16);
 		Node rootbt6 = new Node(10);
-		BinaryTree1 tree1bt = new BinaryTree1(rootbt1);
-		BinaryTree1 tree2bt = new BinaryTree1(rootbt2);
-		BinaryTree1 tree3bt = new BinaryTree1(rootbt3);
-		BinaryTree1 tree4bt = new BinaryTree1(rootbt4);
-		BinaryTree1 tree5bt = new BinaryTree1(rootbt5);
-		BinaryTree1 tree6bt = new BinaryTree1(rootbt6);
+		BinaryTree tree1bt = new BinaryTree(rootbt1);
+		BinaryTree tree2bt = new BinaryTree(rootbt2);
+		BinaryTree tree3bt = new BinaryTree(rootbt3);
+		BinaryTree tree4bt = new BinaryTree(rootbt4);
+		BinaryTree tree5bt = new BinaryTree(rootbt5);
+		BinaryTree tree6bt = new BinaryTree(rootbt6);
 
 		NodeN_Ary root2 = new NodeN_Ary(20);
-		N_AryTree5 tree2 = new N_AryTree5(root2);
+		N_AryTree tree2 = new N_AryTree(root2);
 		
 		NodeN_Ary node1 = new NodeN_Ary(3);
 		NodeN_Ary node2 = new NodeN_Ary(6);
@@ -43,43 +43,43 @@ public class main {
 		tree2.getRoot().getChilds().get(0).addChild(node9);
 		tree2.getRoot().getChilds().get(0).addChild(node10);
 		
-		tree1bt.add1(3);
-		tree1bt.add1(0);
-		tree1bt.add1(8);
-		tree1bt.add1(6);
-		tree1bt.add1(10);
-		tree1bt.add1(15);
+		tree1bt.add(3);
+		tree1bt.add(0);
+		tree1bt.add(8);
+		tree1bt.add(6);
+		tree1bt.add(10);
+		tree1bt.add(15);
 		
-		tree2bt.add1(19);
-		tree2bt.add1(9);
-		tree2bt.add1(5);
-		tree2bt.add1(50);
-		tree2bt.add1(66);
-		tree2bt.add1(10);
+		tree2bt.add(19);
+		tree2bt.add(9);
+		tree2bt.add(5);
+		tree2bt.add(50);
+		tree2bt.add(66);
+		tree2bt.add(10);
 		
-		tree3bt.add1(11);
-		tree3bt.add1(12);
-		tree3bt.add1(23);
-		tree3bt.add1(8);
-		tree3bt.add1(96);
+		tree3bt.add(11);
+		tree3bt.add(12);
+		tree3bt.add(23);
+		tree3bt.add(8);
+		tree3bt.add(96);
 		
-		tree4bt.add1(65);
-		tree4bt.add1(7);
-		tree4bt.add1(13);
-		tree4bt.add1(5);
-		tree4bt.add1(3);
-		tree4bt.add1(1);
+		tree4bt.add(65);
+		tree4bt.add(7);
+		tree4bt.add(13);
+		tree4bt.add(5);
+		tree4bt.add(3);
+		tree4bt.add(1);
 		
-		tree5bt.add1(4);
-		tree5bt.add1(10);
-		tree5bt.add1(26);
-		tree5bt.add1(8);
-		tree5bt.add1(32);
-		tree5bt.add1(40);
+		tree5bt.add(4);
+		tree5bt.add(10);
+		tree5bt.add(26);
+		tree5bt.add(8);
+		tree5bt.add(32);
+		tree5bt.add(40);
 		
-		tree6bt.add1(1);
-		tree6bt.add1(11);
-		tree6bt.add1(20);
+		tree6bt.add(1);
+		tree6bt.add(11);
+		tree6bt.add(20);
 		
 		System.out.println(tree6bt.isFull(tree6bt.getRoot()));	
 		

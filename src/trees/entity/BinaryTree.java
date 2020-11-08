@@ -1,6 +1,6 @@
 package trees.entity;
 
-public class BinaryTree1 {
+public class BinaryTree {
 	
 	private Node root;
 	
@@ -12,7 +12,7 @@ public class BinaryTree1 {
 		this.root = root;
 	}
 
-	public BinaryTree1(Node root) {
+	public BinaryTree(Node root) {
 		super();
 		this.root = root;
 	}
@@ -37,7 +37,7 @@ public class BinaryTree1 {
 		}
 	}
 	
-	public void add1(int value) {
+	public void add(int value) {
 		if (root == null) {
 			root = new Node(value);
 		}
@@ -54,15 +54,15 @@ public class BinaryTree1 {
 		}
 	}
 	
-	public int nodeLeafCount2(Node n) {
+	public int nodeLeafCount(Node n) {
 		if(n.isLeaf()) {
 			return 1;
 		}
 		else
-            return nodeLeafCount2(n.getLeft()) + nodeLeafCount2(n.getRight());
+            return nodeLeafCount(n.getLeft()) + nodeLeafCount(n.getRight());
 	}
 	
-	public boolean isSearchBT3() {
+	public boolean isSearchBT() {
 			if(root.hasLeft() && root.hasLeft()) {
 				if(root.getValue() > root.getLeft().getValue() && root.getValue() < root.getRight().getValue()) {
 					return true;
@@ -98,8 +98,16 @@ public class BinaryTree1 {
 		else {
 			return false;
 		}
-         
 	}
 	
-	
+	public boolean isAVL(Node root) {
+		int thisHeight = height(root.getLeft())-height(root.getRight());
+		
+		if(thisHeight<=1 && thisHeight>=-1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }
